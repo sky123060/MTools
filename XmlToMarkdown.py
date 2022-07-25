@@ -78,7 +78,7 @@ class XmlToMarkdown:
 
         for post in data:
             # 定义 markdown 文件名
-            filename = f"{post['date'][:11].replace('-', '')}-{post['title']}.md"
+            filename = f"{post['date'][:10].replace('-', '')}-{post['title']}.md"
 
             with open(os.path.join(path, filename), encoding='utf-8', mode='a') as f:
                 # 根据自己的文章模板构造写入内容
